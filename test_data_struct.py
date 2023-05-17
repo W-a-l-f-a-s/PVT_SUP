@@ -154,7 +154,7 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(2)
+    time.sleep(4)
     #input()
     count = 0
     refresh_mem =[]
@@ -224,7 +224,7 @@ if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=True, headless=False)
     website_to_test = "https://www.flipkart.com"
-    seleniumsselector_list = ['css selector;//button[contains(@class, "_2KpZ6l")]' , 'partial link text;Travel'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    seleniumsselector_list = ['xpath;//button[@class="_2KpZ6l _2doB4z"]' , 'css selector;a._1arVWX[href="/s/press?otracker=undefined_footer_navlinks"]' , 'rand_ind:css selector;p.read-more'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
     #test_struct("https://www.mediafire.com/")

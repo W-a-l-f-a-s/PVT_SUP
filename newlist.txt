@@ -53,10 +53,80 @@
 134,chase.com
 148,buzzfeed.com
 149,indeed.com
+
+
+
 151,mediafire.com
+
+WEBSITE_LIST = {"https://www.mediafire.com/":
+                {"specifics":"ablock=true;",
+                 "frontpage":'direct link;',
+                 "endpoints":
+                 { 
+                  "upgradepg" : 'direct-link;upgrade',
+                  "loginpg" : 'direct-link;login',
+                  "aboutpg" : 'direct-link;about',
+                  "softwarepg" : 'direct-link;software',
+                  "adpg" : 'direct-link;advertising',
+                  "creditspg" : 'direct-link;credits',
+                  
+                 },
+                  "sub-endpoints":
+                  {
+                      "aboutpg" : {"contact":'relies_prev:direct-link;contact_us.php',
+                                   },
+                      "upgradepg":{"register":'relies_prev:direct-link;registration.php?pid=free',
+                                   "registerbusiness":'relies_prev:direct-link;registration.php?pid=business_monthly_legacy',
+                                   "registerpromonthly":'relies_prev:direct-link;registration.php?pid=premium_monthly',
+                                   "registerproannually":'relies_prev:direct-link;registration.php?pid=premium_annual',
+                                  },
+                  }
+                 }
+                }
+
+
+
+
+
 158,spotify.com
+
+WEBSITE_LIST = {"https://www.flipkart.com/":
+		    {"specifics":"adblock=true;",
+		     "closesignup":'xpath;//button[@class="_2KpZ6l _2doB4z"]',
+		     "endpoints":
+		     {
+			"aboutus" : 'css selector;a._1arVWX[href="/about-us?otracker=undefined_footer_navlinks"]',
+			"news" : 'css selector;a._1arVWX[href="/s/press?otracker=undefined_footer_navlinks"]',
+			"corponews" : 'css selector;a._1arVWX[href="/corporate-information"]',
+		     },
+			"sub-endpoints":
+			{
+				"news" : 
+
+
+
+xpath;//img[@class="_396cs4" and @alt="Travel"]
+
+
+
 159,flipkart.com
+
+
+
+
+
 160,ladbible.com
+
+
+
+
+
+
+
+
+
+
+
 178,wikihow.com
 179,yelp.com
 175,force.com
@@ -66,6 +136,9 @@
 187,etsy.com
 194,softonic.com
 199,9gag.com
+
+
+
 202,bankofamerica.com
 207,thestartmagazine.com
 211,tripadvisor.com
