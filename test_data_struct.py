@@ -95,7 +95,7 @@ def test_struct(website_url:str):
 def retry_3times_relies_prev_multiple(driver, website_url, last_type_find, last_css, next_type_find, next_css):
     elements = None
     count = 0
-    while elements == None and count < 3:
+    while elements == None and count < 5:
         count+=1
         try:
             #element = driver.find_elements(next_type_find, next_css)
@@ -154,7 +154,7 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(4)
+    time.sleep(2)
     #input()
     count = 0
     refresh_mem =[]
@@ -167,7 +167,10 @@ def test_ss_list(website_url:str, ss_list:list, driver):
             special, type_find = type_find.split(":")
             special_list = special.split["~"]
         except:
-            pass
+            try:
+                special_list = special
+            except:
+                pass
         print(count)
         count+=1
         #input()
@@ -223,9 +226,9 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://www.flipkart.com"
-    seleniumsselector_list = ['xpath;//button[@class="_2KpZ6l _2doB4z"]' , 'css selector;a._1arVWX[href="/s/press?otracker=undefined_footer_navlinks"]' , 'rand_ind:css selector;p.read-more'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    website_to_test = "https://www.ladbible.com"
+    seleniumsselector_list = ['partial link text;Submit your content'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
-    #test_struct("https://www.mediafire.com/")
+    #test_struct("https://www.flipkart.com/")
     pass
