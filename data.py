@@ -1,25 +1,18 @@
-WEBSITE_LIST = {"https://www.mediafire.com/":
-                {"specifics":"ablock=true;",
-                 "frontpage":'direct link;',
-                 "endpoints":
-                 { 
-                  "upgradepg" : 'direct-link;upgrade',
-                  "loginpg" : 'direct-link;login',
-                  "aboutpg" : 'direct-link;about',
-                  "softwarepg" : 'direct-link;software',
-                  "adpg" : 'direct-link;advertising',
-                  "creditspg" : 'direct-link;credits',
-                  
-                 },
-                  "sub-endpoints":
-                  {
-                      "aboutpg" : {"contact":'relies_prev:direct-link;contact_us.php',
-                                   },
-                      "upgradepg":{"register":'relies_prev:direct-link;registration.php?pid=free',
-                                   "registerbusiness":'relies_prev:direct-link;registration.php?pid=business_monthly_legacy',
-                                   "registerpromonthly":'relies_prev:direct-link;registration.php?pid=premium_monthly',
-                                   "registerproannually":'relies_prev:direct-link;registration.php?pid=premium_annual',
-                                  },
-                  }
-                 }
-                }
+WEBSITE_LIST = {"https://www.flipkart.com/":
+		    {"specifics":"adblock=true;",
+		     "closesignup":'xpath;//button[@class="_2KpZ6l _2doB4z"]',
+		     "endpoints":
+		     {
+			"aboutus" : 'css selector;a._1arVWX[href="/about-us?otracker=undefined_footer_navlinks"]',
+			"news" : 'css selector;a._1arVWX[href="/s/press?otracker=undefined_footer_navlinks"]',
+			"corponews" : 'css selector;a._1arVWX[href="/corporate-information"]',
+		     },
+			"sub-endpoints":
+			{
+				"news" : {"randnews" : 'rand_ind~:css selector;article' , 'class name;read-more',
+					    },
+				"randtrenditem" : {'rand_ind~:css selector;div._1GTrm1',
+							 },
+			 }
+		      }
+		     }
