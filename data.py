@@ -9,7 +9,7 @@ WEBSITE_LIST = {"https://www.flipkart.com/":
 		     },
 			"sub-endpoints":
 			{
-				"news" : {"randnews" : 'rand_ind~:css selector;article' , 'class name;read-more',
+				"news" : {"randnews" : 'rand_ind~:css selector;article' , 'class name;read-more'
 					    },
 				"randtrenditem" : {'rand_ind~:css selector;div._1GTrm1',
 							 },
