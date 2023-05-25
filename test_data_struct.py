@@ -154,7 +154,7 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(2)
+    time.sleep(4)
     #input()
     count = 0
     refresh_mem =[]
@@ -226,8 +226,8 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://www.ladbible.com"
-    seleniumsselector_list = ['partial link text;Submit your content'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    website_to_test = "https://open.spotify.com/"
+    seleniumsselector_list = ['partial link text;For the Record' , 'css selector;a.button.hollow[href="/news"]'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
     #test_struct("https://www.flipkart.com/")
