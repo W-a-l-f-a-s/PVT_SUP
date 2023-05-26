@@ -52,7 +52,50 @@
 133,blogger.com
 134,chase.com
 148,buzzfeed.com
+
+WEBSITE_LIST = {"https://www.buzzfeed.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "quizzes" : 'partial link text;Quizzes',
+                  "tvmovies" : 'partial link text;TV & Movies',
+                  "shopping" : 'partial link text;Shopping',
+                  "videos" : 'partial link text;Videos',
+                  "news" : 'partial link text;News',
+                  "food" : 'partial link text;Tasty',
+                  "signin" : 'partial link text;Sign In',
+                  "lolx3" : 'partial link text;lol Badge Feed',
+                  "winner" : 'partial link text;win Badge Feed',
+                  "trending" : 'partial link text;trending Badge Feed',
+			"openmenu" : 'refresh_sens:css selector;[aria-label="open menu to see more links"]'
+                 },
+                  "sub-endpoints":
+                  {
+                      "openmenu" : {"aboutpg" : 'relies_prev:partial link text;About Us',
+						"advertise" : 'relies_prev:partial link text;Advertise',
+						"invest" : 'relies_prev:partial link text;Investor Relations',
+						"getajob" : 'relies_prev:partial link text;Jobs',
+						"merch" : 'relies_prev:partial link text;Merch',
+						"newsletters" : 'relies_prev:partial link text;Newsletters',
+						"leaderboard" : 'relies_prev:partial link text;Leaderboard',
+                                   },
+			    "aboutpg" : {"randmanager" : 'class name;team_block-img'
+                  }
+                 }
+                }
+
 149,indeed.com
+
+WEBSITE_LIST = {"https://ca.indeed.com":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+		    }
+		   }
+
+INDEED DOES NOT ALLOW BOTS ANYWHERE ASIDE FROM THE HOMEPAGE
+
+
+
 
 
 
@@ -85,7 +128,7 @@ WEBSITE_LIST = {"https://www.mediafire.com/":
 
 158,spotify.com
 
-WEBSITE_LIST = {"https://open.spotify.com/":
+WEBSITE_LIST = {"https://open.spotify.com":
 		    {"specifics":"adblock=true;",
 		     "endpoints":
 		     {
@@ -98,6 +141,10 @@ WEBSITE_LIST = {"https://open.spotify.com/":
 			"about" : 'css selector;span[data-encore-id="type"].Type__TypeElement-sc-goli3j-0.gownZX',
 			"jobs" : 'partial link text;Jobs',
 			"news" : 'partial link text;For the Record',
+			"support" : 'partial link text;Support',
+			"4artists" : 'partial link text;For Artists',
+			"DEVELOPERSDEVELOPERSDEVELOPERS" : 'partial link text;Developers',
+			"advertising" : 'partial link text;Advertising',
 		     },
 			"sub-endpoints":
 			{
@@ -110,8 +157,40 @@ WEBSITE_LIST = {"https://open.spotify.com/":
 					     "premium" : 'partial link text;Premium Offer Terms',
 					    },
 				"privacentre" : {"protecc" : 'xpath;//button[@class="onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon"]' , 'partial link text;protecting your account'},
-				"news" : {"randnews" : 'rand_ind:class name;box-border',
+				"news" : {"randnoteworthy" : 'rand_ind:class name;box-border',
 					    "fullnews" : 'css selector;a.button.hollow[href="/news"]'},
+				"support" : {"randhelpcard" : 'rand_ind:css selector;div[role="listitem"]',
+						 "randquickhelp" : 'rand_ind:css selector;li[data-encore-id="listItem"]',
+						 "communityhelp" : 'partial link text;Go to Community',
+						},
+				"4artists" : {"streamon" : 'partial link text:Discover more',
+						  "merchstart" : 'css selector;[aria-label="Go to slide number 2"]' , 'partial link text;Get started',
+						  "marqueestart" : 'css selector;[aria-label="Go to slide number 3"]' , 'partial link text;Get ready',
+						  "fanstarty" : 'css selector;[aria-label="Go to slide number 4"]' , 'partial link text;Explore now',
+						  "fanbasestart" : 'css selector;[aria-label="Go to slide number 5"]' , 'partial link text;Learn more',
+						  "randvideonews" : 'rand_ind:css selector;[class="ItemList__FeaturableGridItem-sc-9o6cum-1 cCiwfG"]',
+						 },
+				"DEVELOPERSDEVELOPERSDEVELOPERS" : {"webapi" : 'partial link text;Web API',
+										"websdk" : 'partial link text;Web Playback SDK',
+										"adsapi" : 'partial link text;Ads API',
+										"ios" : 'partial link text;iOS',
+										"android" : 'partial link text;Android',
+										"embeds" : 'partial link text;Embeds',
+										"comhardware" : 'partial link text;Commercial Hardware',
+										"design" : 'partial link text;Design',
+										"accessi" : 'partial link text;Accessibility',
+										"commnews" : 'partial link text;News',
+										"commforum" : 'partial link text;Forum',
+										"devterms" : 'partial link text;Developer Terms',
+										"devpolicy" : 'partial link text;Developer Policy',
+										"compliance" : 'partial link text;Compliance Tips',
+										"thirdparty" : 'partial link text;Third Party Licenses',
+									     },
+				"advertising" : {"adpricing" : 'partial link text;Learn about pricing',
+						     "adscript" : 'css selector;[data-index="1"]' , 'partial link text;Learn about creative tools',
+						     "adtarget" : 'css selector;[data-index="2"]' , 'partial link text;Learn about audience targeting',
+						     "adreporting" : 'css selector;[data-index="3"]' , 'partial link text;Learn about reporting',
+						     "adprogram" : 'xpath;//button[@class="onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon"]' , 'partial link text;Programmatic ads',
 			 }
 		      }
 		     }
@@ -132,7 +211,7 @@ WEBSITE_LIST = {"https://www.flipkart.com/":
 		     },
 			"sub-endpoints":
 			{
-				"press" : {"randnews" : 'rand_ind~:css selector;article' , 'class name;read-more'},
+				"press" : {"randnews" : 'rand_ind:css selector;article' , 'class name;read-more'},
 				"randtrenditem" : {'rand_ind~:css selector;div._1GTrm1'},
 			 }
 		      }

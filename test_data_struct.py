@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from random import randint
 
-from data import WEBSITE_LIST
+# from data import WEBSITE_LIST
 
 
 USERS_USER_AGENT_DICT = {
@@ -226,8 +226,8 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://open.spotify.com/"
-    seleniumsselector_list = ['partial link text;For the Record' , 'css selector;a.button.hollow[href="/news"]'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    website_to_test = "https://www.buzzfeed.com/ca"
+    seleniumsselector_list = ['refresh_sens:css selector;[aria-label="open menu to see more links"]' , 'relies_prev:partial link text;About Us' , 'rand_ind:class name;team_block-img'] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
     #test_struct("https://www.flipkart.com/")

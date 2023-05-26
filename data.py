@@ -1,3 +1,46 @@
+WEBSITE_LIST = {"https://www.buzzfeed.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "quizzes" : 'partial link text;Quizzes',
+                  "tvmovies" : 'partial link text;TV & Movies',
+                  "shopping" : 'partial link text;Shopping',
+                  "videos" : 'partial link text;Videos',
+                  "news" : 'partial link text;News',
+                  "food" : 'partial link text;Tasty',
+                  "signin" : 'partial link text;Sign In',
+                  "lolx3" : 'partial link text;lol Badge Feed',
+                  "winner" : 'partial link text;win Badge Feed',
+                  "trending" : 'partial link text;trending Badge Feed',
+			"openmenu" : 'refresh_sens:css selector;[aria-label="open menu to see more links"]'
+                 },
+                  "sub-endpoints":
+                  {
+                      "openmenu" : {"aboutpg" : 'relies_prev:partial link text;About Us',
+						"advertise" : 'relies_prev:partial link text;Advertise',
+						"invest" : 'relies_prev:partial link text;Investor Relations',
+						"getajob" : 'relies_prev:partial link text;Jobs',
+						"merch" : 'relies_prev:partial link text;Merch',
+						"newsletters" : 'relies_prev:partial link text;Newsletters',
+						"leaderboard" : 'relies_prev:partial link text;Leaderboard',
+                                   },
+			    "aboutpg" : {"ceoboy" : 'class name;team_block-img'
+                  }
+                 }
+                }
+
+WEBSITE_LIST = {"https://ca.indeed.com":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+		    }
+		   }
+
+# INDEED DOES NOT ALLOW BOTS ANYWHERE ASIDE FROM THE HOMEPAGE
+
+
+
+
+
 WEBSITE_LIST = {"https://www.mediafire.com/":
                 {"specifics":"ablock=true;",
                  "frontpage":'direct link;',
@@ -29,7 +72,7 @@ WEBSITE_LIST = {"https://open.spotify.com/":
 		     {
 			"signup" : 'css selector;button.Button-sc-1dqy6lx-0.jVdqg.sibxBMlr_oxWTfBrEz2G[data-encore-id="buttonTertiary"]',
 			"login" : 'css selector;button[data-testid="login-button"]',
-			"legal" : ''partial link text;Legal',
+			"legal" : 'partial link text;Legal',
 			"privacentre" : 'partial link text;Privacy Center',
 			"cookies" : 'partial link text;Cookies',
 			"accessibility" : 'partial link text;Accessibility',
